@@ -1,0 +1,44 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5">Registration</h1>
+    </div>
+    <div class="bg-white border rounded p-5">
+        <form [formGroup]="registrationForm" (ngSubmit)="signUp(registrationForm)" class="row g-3">
+            <div class="col-md-6">
+                <label for="OrganizationName" class="form-label">Organization Name</label>
+                <input type="text" class="form-control" id="OrganizationName" formControlName="OrganizationName" placeholder="Organization Name">
+            </div>
+            <div class="col-md-6">
+                <label for="Address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="Address" formControlName="Address" placeholder="Address">
+            </div>
+            <div class="col-12">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" formControlName="Email" placeholder="Email">
+            </div>
+            <div class="col-md-6">
+                <label for="FirstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="FirstName" formControlName="FirstName" placeholder="First Name">
+            </div>
+            <div class="col-md-6">
+                <label for="LastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="LastName" formControlName="LastName" placeholder="Last Name">
+            </div>
+            <div class="col-12">
+                <label for="UserName" class="form-label">Username</label>
+                <input type="text" class="form-control" id="UserName" formControlName="UserName" placeholder="Username">
+            </div>
+            <div class="col-12">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" formControlName="Password" placeholder="Password" (focus)="passwordFocused = true" (blur)="passwordFocused = false">
+            </div>
+            <div class="col-12">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
